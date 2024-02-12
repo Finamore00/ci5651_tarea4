@@ -101,7 +101,11 @@ fn main() {
                     }
                 }
             }
-            "limpiar" => println!("Se solicitó des-inicializar el arreglo"),
+            "limpiar" => {
+                a = a.iter().map(|_| {0}).collect();
+                b = b.iter().map(|_| {0}).collect();
+                t = t.iter().map(|_| {-1}).collect();
+            },
             "help" => print_client_help(),
             "salir" => exit_flag = true,
             _ => println!("Comando no reconocido. Para ver comandos disponibles, ingresar 'help'"),
