@@ -102,6 +102,7 @@ fn main() {
                 }
             }
             "limpiar" => {
+                //Tecnicamente estamos inicializando cuando limpiamos pero bueno que se le hace
                 a = a.iter().map(|_| {0}).collect();
                 b = b.iter().map(|_| {0}).collect();
                 t = t.iter().map(|_| {-1}).collect();
