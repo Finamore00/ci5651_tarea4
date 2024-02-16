@@ -7,9 +7,9 @@ fn good_subarrays(a: Vec<i32>) -> u32 {
         for index in (len-1)..a.len() {
             if a[index] % ((len) as i32) == 0 {
                 curr[index] += prev[0..index].iter().sum::<u32>(); //tecnicamente O(n^3) matenme plz
+                accum += curr[index];
             }
         }
-        accum += curr.iter().sum::<u32>();
         prev = curr;
     }
     accum
